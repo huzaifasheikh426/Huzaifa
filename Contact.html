@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-form-container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .contact-form-container input, .contact-form-container textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .contact-form-container button {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.1em;
+        }
+        .contact-info p {
+            margin-top: 20px;
+            font-size: 1.1em;
+            line-height: 1.5;
+        }
+        .error-message { color: red; margin-top: -10px; margin-bottom: 10px; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">...</nav> </header>
+
+    <main class="container">
+        <div class="contact-form-container">
+            <h2>Get In Touch</h2>
+            <form id="contactForm">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" required>
+                <div id="nameError" class="error-message"></div>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <div id="emailError" class="error-message"></div>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <div id="messageError" class="error-message"></div>
+
+                <button type="submit">Send Message</button>
+            </form>
+
+            <div class="contact-info">
+                <h3>Our Details</h3>
+                <p><strong>Address:</strong> 123 E-Shop Lane, City, Country</p>
+                <p><strong>Phone:</strong> +123 456 7890</p>
+                <p><strong>Email:</strong> info@eshop.com</p>
+                <p><strong>Social:</strong> [Facebook] [Twitter] [Instagram]</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>...</footer> <script>
+        // Form Validation Logic (required)
+        const contactForm = document.getElementById('contactForm');
+
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Default form submit ko rokein
+            let isValid = true;
+
+            // Simple Validation (Aap isko aur complex bana sakte hain)
+            const fullName = document.getElementById('fullName');
+            const email = document.getElementById('email');
+            const message = document.getElementById('message');
+
+            // Name Validation
+            if (fullName.value.trim().length < 3) {
+                document.getElementById('nameError').innerText = 'Name must be at least 3 characters.';
+                isValid = false;
+            } else {
+                document.getElementById('nameError').innerText = '';
+            }
+            
+            // Email Validation (Simple check)
+            if (!email.value.includes('@') || !email.value.includes('.')) {
+                document.getElementById('emailError').innerText = 'Please enter a valid email address.';
+                isValid = false;
+            } else {
+                document.getElementById('emailError').innerText = '';
+            }
+
+            // Message Validation
+            if (message.value.trim().length < 10) {
+                document.getElementById('messageError').innerText = 'Message must be at least 10 characters.';
+                isValid = false;
+            } else {
+                document.getElementById('messageError').innerText = '';
+            }
+
+
+            if (isValid) {
+                alert('Form submitted successfully! (Static submission)');
+                contactForm.reset();
+            }
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html> 
