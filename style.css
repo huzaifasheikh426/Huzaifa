@@ -1,0 +1,139 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+/* --- Navigation Bar --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px 20px;
+    color: white;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.nav-links li a:hover {
+    background-color: #555;
+}
+
+/* --- Main Content --- */
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* --- Product Grid (Important for responsiveness) --- */
+.product-grid {
+    display: grid;
+    /* By default, mobile screen ke liye 1 column */
+    grid-template-columns: 1fr; 
+    gap: 20px;
+}
+
+/* --- Product Card Styling --- */
+.product-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product-image {
+    width: 100%;
+    max-height: 200px;
+    object-fit: contain; /* Image ko poori tarah dikhane ke liye */
+    margin-bottom: 15px;
+}
+
+.product-title {
+    font-size: 1.1em;
+    height: 3em; /* Title ko fixed height de dein */
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 1.4em;
+    color: #007bff; /* Blue color for price */
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.card-actions button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+.detail-btn {
+    background-color: #28a745; /* Green */
+    color: white;
+}
+.detail-btn:hover {
+    background-color: #1e7e34;
+}
+
+.add-to-cart-btn {
+    background-color: #ffc107; /* Yellow */
+    color: #333;
+}
+.add-to-cart-btn:hover {
+    background-color: #e0a800;
+}
+
+
+/* --- Media Queries (Making it Responsive) --- */
+@media (min-width: 600px) {
+    /* Tablet screen ke liye 2 columns */
+    .product-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 992px) {
+    /* Desktop screen ke liye 4 columns */
+    .product-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .navbar {
+        padding: 15px 50px;
+    }
+}
