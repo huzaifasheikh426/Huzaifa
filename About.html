@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - E-Commerce Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        .about-content {
+            padding: 40px 0;
+            text-align: center;
+        }
+        .about-content h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .about-content p {
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+            line-height: 1.8;
+            font-size: 1.1em;
+            color: #555;
+            text-align: left;
+        }
+        .mission-vision {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .mv-card {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            flex: 1 1 45%; /* Responsive width */
+            min-width: 300px;
+        }
+        .mv-card h3 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+        .team-section {
+            padding: 50px 0;
+            text-align: center;
+        }
+        .team-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">E-Commerce Project</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#" id="cart-icon"><i class="fas fa-shopping-cart"></i> (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="about-content">
+            <h2>About Our Company</h2>
+            
+            <p>
+                Welcome to the E-Commerce Project! We are dedicated to bringing you a curated selection of the finest goods, ranging from high-tech gadgets to the latest fashion trends. Established in 2025, our mission is to simplify online shopping by providing a seamless, secure, and satisfying experience for every customer.
+            </p>
+            <p>
+                Our core philosophy revolves around quality, transparency, and outstanding customer support. We believe that technology should empower consumers, and our platform, built using only HTML, CSS, and pure JavaScript, is a testament to clean, efficient, and modern web development practices.
+            </p>
+            
+            <div class="mission-vision">
+                <div class="mv-card">
+                    <h3><i class="fas fa-lightbulb"></i> Our Vision</h3>
+                    <p>To be the most trusted and customer-centric e-commerce platform globally, setting the standard for user experience and product reliability.</p>
+                </div>
+                <div class="mv-card">
+                    <h3><i class="fas fa-bullseye"></i> Our Mission</h3>
+                    <p>To consistently offer diverse, high-quality products and ensure rapid, dependable delivery, all while maintaining cutting-edge digital infrastructure.</p>
+                </div>
+            </div>
+            
+        </section>
+
+        <section class="team-section">
+            <h2>Meet The Team</h2>
+            <img src="team-placeholder.jpg" alt="Team Image Placeholder" class="team-image">
+            <p style="margin-top: 15px;">A dedicated group of developers and designers brought this project to life.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 E-Commerce Project. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
